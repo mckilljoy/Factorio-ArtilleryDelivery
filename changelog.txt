@@ -1,2 +1,25 @@
-0.16.0 -- Added support for arbitrary items via "supported-items.lua"; migrated to git; code cleanup.
-0.16.0 -- Initial release; added artillery delivery turrent, artillery targets, and delivery shells for basic ores.
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 22. 01. 2018
+  General:
+    - Changed changelog to Factorio format
+    - Added setting for shell icon display mode
+    - Created item group called artillery-delivery
+  Mod Support:
+    - Added Bob's Ores support
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 22. 01. 2018
+  General:
+    - Code cleanup
+    - Migrated to github
+  Mod support:
+    - Added support for arbitrary items via "supported-items.lua"
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 21. 01. 2018
+  General:
+    - Initial release
+    - Added artillery delivery turrent
+    - Added artillery targets
+    - Added delivery shells for vanilla ores
