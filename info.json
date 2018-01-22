@@ -1,0 +1,11 @@
+{
+    "name": "ArtilleryDelivery",
+    "version": "0.16.1",
+    "title": "Artillery Delivery",
+    "author": "mckilljoy",
+    "contact": "Ping me on the Discussion thread!",
+    "homepage": "",
+    "factorio_version": "0.16",
+    "dependencies": ["base >= 0.16"],
+    "description": "Transport of basic goods via artillery cannon."
+}

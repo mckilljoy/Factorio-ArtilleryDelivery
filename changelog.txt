@@ -1,0 +1,2 @@
+0.16.0 -- Added support for arbitrary items via "supported-items.lua"; migrated to git; code cleanup.
+0.16.0 -- Initial release; added artillery delivery turrent, artillery targets, and delivery shells for basic ores.
