@@ -6,8 +6,7 @@ valid_artillery_items =
   "stone",
   "iron-ore",
   "copper-ore",
-  "uranium-ore",
-  "iron-plate"
+  "uranium-ore"
 }
 
 -- Items listed here will get artillery shells with a custom tint.
