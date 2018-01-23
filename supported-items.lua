@@ -9,7 +9,8 @@ valid_artillery_items =
   "uranium-ore"
 }
 
-bobores_valid_artillery_items = {
+bobores_valid_artillery_items =
+{
   "amethyst-ore",
   "bauxite-ore",
   "cobalt-ore",
@@ -54,17 +55,17 @@ bobores_custom_tints =
   ["emerald-ore"] = {r = 50, g = 100, b = 42, a = 255},
   ["gem-ore"] = {r = 230, g = 175, b = 120, a = 255},
   ["gold-ore"] = {r = 240, g = 200, b = 50, a = 255},
-  ["lead-ore"] = {r = 30, g = 30, b = 30, a = 255}, --
+  ["lead-ore"] = {r = 30, g = 30, b = 30, a = 255},
   ["nickel-ore"] = {r = 105, g = 185, b = 155, a = 255},
-  ["quartz"] = {r = 255, g = 255, b = 255, a = 255}, --
+  ["quartz"] = {r = 255, g = 255, b = 255, a = 255},
   ["ruby-ore"] = {r = 140, g = 30, b = 30, a = 255},
   ["rutile-ore"] = {r = 145, g = 20, b = 160, a = 255},
   ["sapphire-ore"] = {r = 50, g = 50, b = 200, a = 255},
   ["silver-ore"] = {r = 235, g = 235, b = 255, a = 255},
-  ["tin-ore"] = {r = 140, g = 140, b = 140, a = 255}, --
-  ["topaz-ore"] = {r = 255, g = 205, b = 0, a = 255}, --
-  ["tungsten-ore"] = {r = 155, g = 80, b = 30, a = 255}, --
-  ["zinc-ore"] = {r = 80, g = 200, b = 190, a = 255} --
+  ["tin-ore"] = {r = 140, g = 140, b = 140, a = 255},
+  ["topaz-ore"] = {r = 255, g = 205, b = 0, a = 255},
+  ["tungsten-ore"] = {r = 155, g = 80, b = 30, a = 255},
+  ["zinc-ore"] = {r = 80, g = 200, b = 190, a = 255}
 }
 
 function table.merge(t1, t2)
