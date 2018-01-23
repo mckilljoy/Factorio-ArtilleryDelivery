@@ -1,4 +1,3 @@
-
 local artillery_proto = table.deepcopy(data.raw["item"]["artillery-turret"])
 artillery_proto.name = "artillery-delivery-turret"
 artillery_proto.icon = "__ArtilleryDelivery__/graphics/icons/artillery-turret.png"

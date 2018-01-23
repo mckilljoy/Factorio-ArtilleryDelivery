@@ -1,10 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.2
-Date: 22. 01. 2018
+Date: 23. 01. 2018
   General:
     - Changed changelog to Factorio format
     - Added setting for shell icon display mode
     - Created item group called artillery-delivery
+    - Fixed bug where (normal) artillery would attack targets
+    - Artillery target now have custom radar graphics
   Mod Support:
     - Added Bob's Ores support
 ---------------------------------------------------------------------------------------------------
@@ -20,6 +22,6 @@ Version: 0.16.0
 Date: 21. 01. 2018
   General:
     - Initial release
-    - Added artillery delivery turrent
+    - Added artillery delivery turret
     - Added artillery targets
     - Added delivery shells for vanilla ores

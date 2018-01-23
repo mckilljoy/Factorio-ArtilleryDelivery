@@ -1,3 +1,20 @@
+function onInit()
+  game.create_force("targets")
+  game.create_force("turrets")
+  
+  -- players are friends with turrets and targets
+  game.forces["player"].set_friend("targets", true)
+  game.forces["targets"].set_friend("player", true)
+
+  game.forces["player"].set_friend("turrets", true)
+  game.forces["turrets"].set_friend("player", true)
+  
+  -- turrets don't care about conventional enemies  
+  -- but targets are the eternal enemy of the turrets
+  game.forces["turrets"].set_cease_fire("enemy", true)
+  game.forces["turrets"].set_cease_fire("targets", false)
+
+end
 
 function positionString(position)
   return "(" .. position.x .. "," .. position.y .. ")"
@@ -56,7 +73,7 @@ function onGuiOpened(event)
 	drop.style.minimal_width = 300
 	drop.style.maximal_width = 300
 	drop.selected_index = 1
-	targets = game.surfaces[1].find_entities_filtered{name= "dummy-artillery-delivery-target", force = "enemy"}
+	targets = game.surfaces[1].find_entities_filtered{name= "artillery-delivery-target", force = "targets"}
 	
 	-- target camera
 	gui.add{type = "label", name = "target-label", caption = "Target:"}
@@ -104,19 +121,16 @@ function onGuiSelectionStateChanged(event)
   
 end
 
-
 function onBuiltEntity(event)
   local ent = event.created_entity
   
   if ent and (ent.name == "artillery-delivery-turret") then
     ent.active = false
+	ent.force = "turrets"
   end
   
   if ent and (ent.name == "artillery-delivery-target") then
-    local dummy_ent = game.surfaces[1].create_entity{name = "dummy-artillery-delivery-target", force = "enemy", position = ent.position }
-	dummy_ent.destructible = false
-	dummy_ent.active = false
-	dummy_ent.teleport(ent.position)
+    ent.force = "targets"
   end
 end
 
@@ -127,27 +141,17 @@ function onRemovedEntity(event)
   end
   
   if ent and (ent.name == "artillery-delivery-target") then
-	local dummy_ent = game.surfaces[1].find_entities_filtered{
-	  name = "dummy-artillery-delivery-target",
-	  area = { {ent.position.x - 1.0, ent.position.y - 1.0}, {ent.position.x + 1.0, ent.position.y + 1.0}}
-	}[1]
-	  
-	--local dummy_ent = game.surfaces[1].find_entity("dummy-artillery-delivery-target", ent.position)
-	--local dummy_ent = game.surfaces[1].find_nearest_enemy{ position = ent.position, max_distance = 4.0 }
-	if dummy_ent == nil then
-	  game.print("dummy nil")
-	  return
-	end
-    local turrets = game.surfaces[1].find_entities_filtered{name= "artillery-delivery-turret"}
+    -- should be a faster way to do this
+    local turrets = game.surfaces[1].find_entities_filtered{name = "artillery-delivery-turret", force = "turrets"}
     for k,v in pairs(turrets) do
-	  if v.shooting_target == dummy_ent then
+	  if v.shooting_target == ent then
 		v.active = false
       end
 	end
-	dummy_ent.destroy()
   end
 end
 
+script.on_init(onInit)
 script.on_event(defines.events.on_trigger_created_entity, onTriggerCreatedEntity)
 
 script.on_event(defines.events.on_gui_opened, onGuiOpened)

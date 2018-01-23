@@ -9,63 +9,31 @@ require("prototypes.technologies")
 require("supported-items")
 
 -- Misc entities to get everything working
-local lamp_item = table.deepcopy(data.raw["item"]["small-lamp"])
-lamp_item.name = "artillery-delivery-target"
-lamp_item.place_result = "artillery-delivery-target"
-lamp_item.subgroup = "artillery-delivery-turrets"
-lamp_item.group = "artillery-delivery"
-lamp_item.order = "f[artillery-delivery]-b"
-data:extend({lamp_item})
+-- Now that things are cleaned things up, these can prob go into item/ent/recipe.lua
+local radar_item = table.deepcopy(data.raw["item"]["radar"])
+radar_item.name = "artillery-delivery-target"
+radar_item.icon = "__ArtilleryDelivery__/graphics/icons/artillery-delivery-target.png"
+radar_item.place_result = "artillery-delivery-target"
+radar_item.subgroup = "artillery-delivery-turrets"
+radar_item.group = "artillery-delivery"
+radar_item.order = "f[artillery-delivery]-b"
+data:extend({radar_item})
 
-local lamp_recipe = table.deepcopy(data.raw["recipe"]["small-lamp"])
-lamp_recipe.name = "artillery-delivery-target"
-lamp_recipe.result = "artillery-delivery-target"
-lamp_recipe.subgroup = "artillery-delivery-turrets"
-lamp_recipe.group = "artillery-delivery"
-lamp_recipe.order = "f[artillery-delivery]-b"
-data:extend({lamp_recipe})
+local radar_recipe = table.deepcopy(data.raw["recipe"]["radar"])
+radar_recipe.name = "artillery-delivery-target"
+radar_recipe.result = "artillery-delivery-target"
+radar_recipe.subgroup = "artillery-delivery-turrets"
+radar_recipe.group = "artillery-delivery"
+radar_recipe.order = "f[artillery-delivery]-b"
+data:extend({radar_recipe})
 
-local dummy_gun_ent = table.deepcopy(data.raw["ammo-turret"]["gun-turret"])
-local lamp_ent = table.deepcopy(data.raw["lamp"]["small-lamp"])
-lamp_ent.name = "artillery-delivery-target"
-lamp_ent.minable.result = "artillery-delivery-target"
-lamp_ent.collision_box = dummy_gun_ent.selection_box
-lamp_ent.selection_box = dummy_gun_ent.selection_box
-data:extend({lamp_ent})
-
-local dummy_gun_item = table.deepcopy(data.raw["item"]["gun-turret"])
-dummy_gun_item.name = "dummy-artillery-delivery-target"
-dummy_gun_item.place_result = "dummy-artillery-delivery-target"
-data:extend({dummy_gun_item})
-
-local animation = {
-  layers = { 
-    { 
-	  axially_symmetrical = false, direction_count = 1, frame_count = 1, height = 1, width = 1, priority = "very-low",
-      shift = {
-              0,
-              0
-              },
-      stripes = {
-              {
-                filename = "__ArtilleryDelivery__/graphics/entities/invisible-pixel.png",
-                height_in_frames = 1,
-                width_in_frames = 1
-              }
-	  }
-    }
-  }
-}
-
-dummy_gun_ent.name = "dummy-artillery-delivery-target"
-dummy_gun_ent.collision_box = {{0,0},{0,0}}
-dummy_gun_ent.selection_box = {{0,0},{0,0}}
-dummy_gun_ent.prepared_animation = animation
-dummy_gun_ent.preparing_animation = animation
-dummy_gun_ent.folded_animation = animation
-dummy_gun_ent.folding_animation = animation
-dummy_gun_ent.base_picture = animation
-data:extend({dummy_gun_ent})
+local radar_ent = table.deepcopy(data.raw["radar"]["radar"])
+radar_ent.name = "artillery-delivery-target"
+radar_ent.icon = "__ArtilleryDelivery__/graphics/icons/artillery-delivery-target.png"
+radar_ent.minable.result = "artillery-delivery-target"
+radar_ent.pictures.layers[1].filename = "__ArtilleryDelivery__/graphics/entities/artillery-delivery-target.png"
+radar_ent.pictures.layers[1].hr_version.filename = "__ArtilleryDelivery__/graphics/entities/hr-artillery-delivery-target.png"
+data:extend({radar_ent})
 
 function ArtilleryShellItem(name, icons, subgroup, order, localized_name)
   
