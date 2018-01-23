@@ -12,14 +12,16 @@ require("supported-items")
 local lamp_item = table.deepcopy(data.raw["item"]["small-lamp"])
 lamp_item.name = "artillery-delivery-target"
 lamp_item.place_result = "artillery-delivery-target"
-lamp_item.subgroup = "artillery-delivery"
+lamp_item.subgroup = "artillery-delivery-turrets"
+lamp_item.group = "artillery-delivery"
 lamp_item.order = "f[artillery-delivery]-b"
 data:extend({lamp_item})
 
 local lamp_recipe = table.deepcopy(data.raw["recipe"]["small-lamp"])
 lamp_recipe.name = "artillery-delivery-target"
 lamp_recipe.result = "artillery-delivery-target"
-lamp_recipe.subgroup = "artillery-delivery"
+lamp_recipe.subgroup = "artillery-delivery-turrets"
+lamp_recipe.group = "artillery-delivery"
 lamp_recipe.order = "f[artillery-delivery]-b"
 data:extend({lamp_recipe})
 
@@ -71,7 +73,8 @@ function ArtilleryShellItem(name, icons, subgroup, order, localized_name)
   {
     type = "ammo",
     name = "artillery-shell-" .. name,
-    subgroup = subgroup,
+    subgroup = "artillery-delivery-shells",
+    group = "artillery-delivery",
     order = order,
     icon_size = 32,
     icons = icons,
@@ -184,7 +187,8 @@ function ArtilleryShellRecipe(name, icons, subgroup, order, localized_name)
   {
     type = "recipe",
     name = "artillery-shell-" .. name,
-    subgroup = subgroup,
+    subgroup = "artillery-delivery-shells",
+    group = "artillery-delivery",
     order = order,
     energy_required = 1,
     enabled = "false",
@@ -218,10 +222,10 @@ end
 for k,item_name in pairs(valid_artillery_items) do
   local item = data.raw.item[item_name]
   local tint = custom_tints[item_name]
-  
+
   local icons = nil
   
-  if tint then
+  if tint and settings.startup['ArtilleryDelivery-useTint'] then
     icons =
 	{
       {
@@ -250,8 +254,8 @@ for k,item_name in pairs(valid_artillery_items) do
   ArtilleryShellItem(
     item.name,
     icons,
-	"artillery-delivery",
-	"f[artillery-delivery]-c[" .. item.name .. "]",
+	"artillery-delivery-shells",
+	"f[artillery-delivery-shells]-c[" .. item.name .. "]",
 	"item-name." .. item.name
   )
   
@@ -260,8 +264,8 @@ for k,item_name in pairs(valid_artillery_items) do
   ArtilleryShellRecipe(
     item.name,
     icons,
-	"artillery-delivery",
-	"f[artillery-delivery]-c[" .. item.name .. "]",
+	"artillery-delivery-shells",
+	"f[artillery-delivery-shells]-c[" .. item.name .. "]",
 	"item-name." .. item.name
   )
 end
