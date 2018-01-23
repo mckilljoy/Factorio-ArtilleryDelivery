@@ -225,7 +225,7 @@ for k,item_name in pairs(valid_artillery_items) do
 
   local icons = nil
   
-  if tint and settings.startup['ArtilleryDelivery-useTint'] then
+  if tint and settings.startup['ArtilleryDelivery-useTint'].value then
     icons =
 	{
       {
