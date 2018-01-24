@@ -20,6 +20,7 @@ radar_item.order = "f[artillery-delivery]-b"
 data:extend({radar_item})
 
 local radar_recipe = table.deepcopy(data.raw["recipe"]["radar"])
+radar_recipe.enabled = false
 radar_recipe.name = "artillery-delivery-target"
 radar_recipe.result = "artillery-delivery-target"
 radar_recipe.subgroup = "artillery-delivery-turrets"
