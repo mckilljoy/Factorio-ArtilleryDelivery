@@ -130,7 +130,7 @@ function ArtilleryShellProjectile(name, tint)
         {
           {
             type = "create-entity",
-            entity_name = "explosion-" .. name,
+            entity_name = "m_explosion-" .. name,
 			trigger_created_entity = true
           },
           {
@@ -144,7 +144,7 @@ function ArtilleryShellProjectile(name, tint)
   }
   
   local explosion_proto = table.deepcopy(data.raw.explosion["big-artillery-explosion"])
-  explosion_proto.name = "explosion-" .. name
+  explosion_proto.name = "m_explosion-" .. name
   
   data:extend({projectile_proto})
   data:extend({explosion_proto})

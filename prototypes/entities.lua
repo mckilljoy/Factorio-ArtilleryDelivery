@@ -2081,6 +2081,101 @@ data:extend(
                 width_in_frames = 1
               },
             },
+            hr_version = {
+              axially_symmetrical = false,
+              direction_count = 64,
+              frame_count = 1,
+              height = 270,
+              width = 358,
+              priority = "very-low",
+			  scale = 0.5,
+              shift = {
+                0,
+                -1.265625
+              },
+              stripes = {
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-1.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-2.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-3.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-4.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-5.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-6.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-7.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-8.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-9.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-10.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-11.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-12.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-13.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-14.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-15.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-16.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              },
+			}
           },
 
           {
@@ -2177,6 +2272,102 @@ data:extend(
                 width_in_frames = 1
               },
             },
+			hr_version = {
+              axially_symmetrical = false,
+              direction_count = 64,
+              draw_as_shadow = true,
+              frame_count = 1,
+              height = 340,
+              width = 476,
+              priority = "very-low",
+              scale = 0.5,
+              shift = {
+                3.515625,
+                1.40625
+              },
+              stripes = {
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-1.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-2.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-3.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-4.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-5.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-6.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-7.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-8.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-9.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-10.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-11.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-12.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-13.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-14.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-15.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              {
+                filename = "__base__/graphics/entity/artillery-wagon/hr-artillery-wagon-cannon-base-shadow-16.png",
+                height_in_frames = 4,
+                width_in_frames = 1
+              },
+              },
+			}
           },
 
 		}

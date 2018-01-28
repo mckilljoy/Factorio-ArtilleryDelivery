@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: XX. 01. 2018
+  General:
+    - Added HR graphics for the artillery turret
+  Mod Support:
+    - Fixed crashed caused by some modes (e.g. Orbital Ion Cannon)
+---------------------------------------------------------------------------------------------------
 Version: 0.16.2
 Date: 23. 01. 2018
   General:

@@ -21,13 +21,14 @@ function positionString(position)
 end
 
 function onTriggerCreatedEntity(event)
-  local prefix = "explosion-"
-  local item = string.sub(event.entity.name, string.len(prefix) + 1)
-
-  if item then
-    game.surfaces[1].spill_item_stack(event.entity.position, {name = item, count = 50})
+  local prefix = "m_explosion-"
+  
+  if string.sub(event.entity.name, 1, string.len(prefix)) == prefix then
+    local item = string.sub(event.entity.name, string.len(prefix) + 1)
+    if item then
+      game.surfaces[1].spill_item_stack(event.entity.position, {name = item, count = 50})
+    end
   end
-
 end
 
 function onGuiClosed(event)
