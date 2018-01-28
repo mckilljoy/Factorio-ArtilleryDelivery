@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.3
-Date: XX. 01. 2018
+Date: 28. 01. 2018
   General:
     - Added HR graphics for the artillery turret
   Mod Support:
     - Fixed crashed caused by some modes (e.g. Orbital Ion Cannon)
+    - Added support  for 5dim ores
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.2
 Date: 23. 01. 2018
@@ -13,7 +14,7 @@ Date: 23. 01. 2018
     - Added setting for shell icon display mode
     - Created item group called artillery-delivery
     - Fixed bug where (normal) artillery would attack targets
-    - Artillery target now have custom radar graphics
+    - Artillery target now has custom radar graphics
   Mod Support:
     - Added Bob's Ores support
 ---------------------------------------------------------------------------------------------------

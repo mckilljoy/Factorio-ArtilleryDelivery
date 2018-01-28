@@ -192,8 +192,12 @@ for k,item_name in pairs(valid_artillery_items) do
   local item = data.raw.item[item_name]
   local tint = custom_tints[item_name]
 
+  if item == nil then
+    return
+  end
+
   local icons = nil
-  
+
   if tint and settings.startup['ArtilleryDelivery-useTint'].value then
     icons =
 	{
